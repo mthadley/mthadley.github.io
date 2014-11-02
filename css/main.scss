@@ -58,12 +58,24 @@ ul {
 #mainContent {
     max-width: 800px;
     margin: 20px auto 0;
+    opacity: 1;
+
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+    #sideCol {
+        position: relative;
+        opacity: 1;
+        right: 0;
+
+        -webkit-transition: opacity 1s 1s, right 1s 1s;
+        -o-transition: opacity 1s 1s, right 1s 1s;
+        transition: opacity 1s 1s, right 1s 1s;
+    }
 }
 
 #siteHeader {
-    top: 0;
-    left: 0;
-    right: 0;
     padding-top: 10px;
 
     ul li {
@@ -89,8 +101,27 @@ ul {
         height: 180px;
         margin-top: 40px;
 
+        -webkit-transition: height 1s;
+        -o-transition: height 1s;
+        transition: height 1s;
+
         @media (max-width: 900px) {
             background-size: 150%;
+        }
+    }
+}
+
+.animate {
+    #siteHeader .banner-img {
+        height: 0;
+    }
+
+    #mainContent {
+        opacity: 0;
+
+        #sideCol {
+            opacity: 0;
+            right: 100px;
         }
     }
 }
