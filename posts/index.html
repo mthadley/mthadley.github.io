@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="posts-index">
+    {% for post in site.posts %}
+        <div class="post-listing">
+                <a href="{{ post.url }}" href="#{{ post.title | replace: ' ', ''}}">{{ post.title }}</a>
+                <small class="post-date">{{ post.date | date: "%Y %B %-d" }}</small>
+            </div>
+        </div>
+    {% endfor %}
+
+    <a class="show-all" href="all.html">Show All</a>
+</div>

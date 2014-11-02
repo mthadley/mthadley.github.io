@@ -1,0 +1,138 @@
+---
+---
+
+@import url(http://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed);
+@import "tango.css";
+
+/* --- Colors --- */
+
+$backgroundColor: #F0F0F0;
+$foregroundColor: #5e5e5e;
+$red: #9C3B43;
+$darkRed: #50262A;
+$green: #848149;
+$darkBlue: #3f8aaa;
+$lightBlue: #549fbf;
+
+/* --- Styles --- */
+
+a {
+    color: $green;
+    font-weight: bold;
+
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+
+    &:hover {
+        color: lighten($green, 20%);
+        text-decoration: none;
+    }
+}
+
+body {
+    background-color: $backgroundColor;
+    color: $foregroundColor;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    color: $red;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+h4, h5, h6 {
+    color: $darkRed
+}
+
+strong {
+    color: darken($foregroundColor, 10%);
+}
+
+ul {
+    list-style: none;
+}
+
+#mainContent {
+    max-width: 800px;
+    margin: 250px auto 0;
+}
+
+#siteHeader {
+    position: absolute;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+
+    ul li {
+        float: left;
+        margin-left: 20px;
+
+        a {
+            color: $lightBlue;
+            font-size: 20px;
+            font-weight: normal;
+
+            &:hover {
+                color: lighten($lightBlue, 20%);
+            }
+        }
+    }
+
+    .banner-img {
+        background-image: url(../assets/bg.jpg);
+        background-position: 0 50%;
+        background-size: 100%;
+        content: '';
+        height: 180px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 50px;
+
+        @media (max-width: 900px) {
+            background-size: 150%;
+        }
+    }
+}
+
+
+.post {
+    margin-bottom: 40px;
+
+    .post-header {
+            margin-bottom: 10px;
+    }
+}
+
+.posts-index {
+    margin-bottom: 40px;
+
+    .post-listing {
+        margin-bottom: 5px;
+    }
+
+    .show-all {
+        color: red;
+    }
+}
+
+.youtube {
+    margin: 25px 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
