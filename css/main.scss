@@ -57,12 +57,10 @@ ul {
 
 #mainContent {
     max-width: 800px;
-    margin: 250px auto 0;
+    margin: 20px auto 0;
 }
 
 #siteHeader {
-    position: absolute;
-    height: 200px;
     top: 0;
     left: 0;
     right: 0;
@@ -89,10 +87,7 @@ ul {
         background-size: 100%;
         content: '';
         height: 180px;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 50px;
+        margin-top: 40px;
 
         @media (max-width: 900px) {
             background-size: 150%;
