@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}Michael Hadley{% endif %}</title>
     <meta name="author" content="{{ site.author }}">
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

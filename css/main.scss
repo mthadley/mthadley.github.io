@@ -73,12 +73,12 @@ ul {
         margin-left: 20px;
 
         a {
-            color: $lightBlue;
+            color: $darkBlue;
             font-size: 20px;
             font-weight: normal;
 
             &:hover {
-                color: lighten($lightBlue, 20%);
+                color: lighten($darkBlue, 20%);
             }
         }
     }
