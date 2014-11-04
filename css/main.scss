@@ -14,6 +14,9 @@ $green: #848149;
 $darkBlue: #3f8aaa;
 $lightBlue: #549fbf;
 
+$duration: 1s;
+$delay: 1s;
+
 /* --- Styles --- */
 
 a {
@@ -69,9 +72,9 @@ ul {
         opacity: 1;
         right: 0;
 
-        -webkit-transition: opacity 1s 1s, right 1s 1s;
-        -o-transition: opacity 1s 1s, right 1s 1s;
-        transition: opacity 1s 1s, right 1s 1s;
+        -webkit-transition: opacity $duration $delay, right $duration $delay;
+        -o-transition: opacity $duration $delay, right $duration $delay;
+        transition: opacity $duration $delay, right $duration $delay;
     }
 }
 
@@ -101,9 +104,9 @@ ul {
         height: 180px;
         margin-top: 40px;
 
-        -webkit-transition: height 1s;
-        -o-transition: height 1s;
-        transition: height 1s;
+        -webkit-transition: height $duration;
+        -o-transition: height $duration;
+        transition: height $duration;
 
         @media (max-width: 900px) {
             background-size: 150%;
