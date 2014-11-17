@@ -9,7 +9,6 @@
 $backgroundColor: #F0F0F0;
 $foregroundColor: #5e5e5e;
 $red: #9C3B43;
-$darkRed: #50262A;
 $green: #848149;
 $darkBlue: #3f8aaa;
 $lightBlue: #549fbf;
@@ -47,7 +46,7 @@ h1, h2, h3 {
 }
 
 h4, h5, h6 {
-    color: $darkRed
+    color: $red;
 }
 
 strong {
@@ -133,6 +132,11 @@ ul {
 .post {
     margin-bottom: 40px;
 
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
     .post-header {
             margin-bottom: 10px;
     }
@@ -144,9 +148,13 @@ ul {
     .post-listing {
         margin-bottom: 5px;
     }
+}
 
-    .show-all {
-        color: red;
+.show-all {
+    color: $red;
+
+    &:hover {
+        color: lighten($red, 20%);
     }
 }
 
