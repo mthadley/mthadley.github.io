@@ -19,146 +19,146 @@ $delay: 1s;
 /* --- Styles --- */
 
 a {
-    color: $green;
-    font-weight: bold;
-    transition: color 0.25s;
+  color: $green;
+  font-weight: bold;
+  transition: color 0.25s;
 
-    &:hover {
-        color: lighten($green, 20%);
-        text-decoration: none;
-    }
+  &:hover {
+    color: lighten($green, 20%);
+    text-decoration: none;
+  }
 }
 
 body {
-    background-color: $backgroundColor;
-    color: $foregroundColor;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
+  background-color: $backgroundColor;
+  color: $foregroundColor;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
 }
 
 h1, h2, h3 {
-    color: $red;
-    font-weight: bold;
-    font-family: 'Oswald', sans-serif;
+  color: $red;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
 }
 
 h4, h5, h6 {
-    color: $red;
+  color: $red;
 }
 
 strong {
-    color: darken($foregroundColor, 10%);
+  color: darken($foregroundColor, 10%);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 #mainContent {
-    max-width: 800px;
-    margin: 20px auto 0;
-    opacity: 1;
-    transition: opacity 1s;
+  max-width: 800px;
+  margin: 20px auto 0;
+  opacity: 1;
+  transition: opacity 1s;
 
-    #sideCol {
-        position: relative;
-        opacity: 1;
-        right: 0;
-        transition: opacity $duration $delay, right $duration $delay;
-    }
+  #sideCol {
+    position: relative;
+    opacity: 1;
+    right: 0;
+    transition: opacity $duration $delay, right $duration $delay;
+  }
 }
 
 #siteHeader {
-    padding-top: 10px;
+  padding-top: 10px;
 
-    ul li {
-        float: left;
-        margin-left: 20px;
+  ul li {
+    float: left;
+    margin-left: 20px;
 
-        a {
-            color: $darkBlue;
-            font-size: 20px;
-            font-weight: normal;
+    a {
+      color: $darkBlue;
+      font-size: 20px;
+      font-weight: normal;
 
-            &:hover {
-                color: lighten($darkBlue, 20%);
-            }
-        }
+      &:hover {
+        color: lighten($darkBlue, 20%);
+      }
     }
+  }
 
-    .banner-img {
-        background-image: url(../assets/bg.jpg);
-        background-position: 0 50%;
-        background-size: 100%;
-        content: '';
-        height: 180px;
-        margin-top: 40px;
-        transition: height $duration;
+  .banner-img {
+    background-image: url(../assets/bg.jpg);
+    background-position: 0 50%;
+    background-size: 100%;
+    content: '';
+    height: 180px;
+    margin-top: 40px;
+    transition: height $duration;
 
-        @media (max-width: 900px) {
-            background-size: 150%;
-        }
+    @media (max-width: 900px) {
+      background-size: 150%;
     }
+  }
 }
 
 .animate {
-    #siteHeader .banner-img {
-        height: 0;
-    }
+  #siteHeader .banner-img {
+    height: 0;
+  }
 
-    #mainContent {
-        opacity: 0;
+  #mainContent {
+    opacity: 0;
 
-        #sideCol {
-            opacity: 0;
-            right: 100px;
-        }
+    #sideCol {
+      opacity: 0;
+      right: 100px;
     }
+  }
 }
 
 
 .post {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 
-    img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-    }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
 
-    .post-header {
-            margin-bottom: 10px;
-    }
+  .post-header {
+    margin-bottom: 10px;
+  }
 }
 
 .posts-index {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 
-    .post-listing {
-        margin-bottom: 5px;
-    }
+  .post-listing {
+    margin-bottom: 5px;
+  }
 }
 
 .show-all {
-    color: $red;
+  color: $red;
 
-    &:hover {
-        color: lighten($red, 20%);
-    }
+  &:hover {
+    color: lighten($red, 20%);
+  }
 }
 
 .youtube {
-    margin: 25px 0;
-    text-align: center;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+  margin: 25px 0;
+  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
 
-    iframe, object, embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
