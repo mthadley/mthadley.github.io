@@ -7,11 +7,11 @@
 /* --- Colors --- */
 
 $backgroundColor: #F0F0F0;
-$foregroundColor: #5e5e5e;
-$red: #9C3B43;
+$darkBlue: #3F8AAA;
+$foregroundColor: #5E5E5E;
 $green: #848149;
-$darkBlue: #3f8aaa;
-$lightBlue: #549fbf;
+$lightBlue: #549FBF;
+$red: #9C3B43;
 
 $duration: 1s;
 $delay: 1s;
@@ -21,9 +21,6 @@ $delay: 1s;
 a {
     color: $green;
     font-weight: bold;
-
-    -webkit-transition: color 0.25s;
-    -o-transition: color 0.25s;
     transition: color 0.25s;
 
     &:hover {
@@ -61,18 +58,12 @@ ul {
     max-width: 800px;
     margin: 20px auto 0;
     opacity: 1;
-
-    -webkit-transition: opacity 1s;
-    -o-transition: opacity 1s;
     transition: opacity 1s;
 
     #sideCol {
         position: relative;
         opacity: 1;
         right: 0;
-
-        -webkit-transition: opacity $duration $delay, right $duration $delay;
-        -o-transition: opacity $duration $delay, right $duration $delay;
         transition: opacity $duration $delay, right $duration $delay;
     }
 }
@@ -102,9 +93,6 @@ ul {
         content: '';
         height: 180px;
         margin-top: 40px;
-
-        -webkit-transition: height $duration;
-        -o-transition: height $duration;
         transition: height $duration;
 
         @media (max-width: 900px) {
