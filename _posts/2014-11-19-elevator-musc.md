@@ -17,11 +17,11 @@ It's pretty funny that for many people, Youtube (a video service) has become the
 
 It's easily installable on most distros (I mostly use Ubuntu so here):
 
-{% highlight console %}
+```sh
 $ sudo apt-get install python-pip
 $ pip install mps-youtube
 $ mpsyt
-{% endhighlight %}
+```
 
 ### Pianobar
 
@@ -33,10 +33,10 @@ Pandora is one of the old standbys in the now very crowded music streaming servi
 
 Another easy one to get started with:
 
-{% highlight console %}
+```sh
 $ sudo apt-get install pianobar
 $ pianobar
-{% endhighlight %}
+```
 
 ### mpd + ncmpcpp
 
@@ -48,9 +48,9 @@ For this purpose, I have been using [mpd](http://www.musicpd.org/) and [ncmpcpp]
 
 These two are definitely geared towards power users. They have all of the features you could ask for in a music player and are easily scriptable due to their command line nature. You will also need to have a locally stored collection of music, making this combo somewhat less portable from machine to machine. Setup is more involved and will require some editing of config files, but at least both are available in most standard distro repos:
 
-{% highlight console %}
+```sh
 $ sudo apt-get install mpd ncmpcpp
-{% endhighlight %}
+```
 
 ### Others
 

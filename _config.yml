@@ -1,7 +1,8 @@
 author: Michael Hadley
 description: Nothing much
 encoding: utf-8
-highlighter: pygments
+kramdown:
+  input: GFM
 name: Mike Hadley
 timezone: America/Los_Angeles
 url: http://mthadley.github.io
