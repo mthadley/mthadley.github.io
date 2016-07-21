@@ -1,0 +1,15 @@
+{% assign post = include.post %}
+
+<article class="post" id="{{ post.slug }}">
+  <header class="post-header">
+    <h1>{{ post.title }}</h1>
+    <small><time>{{ post.date | date: "%Y %B %-d" }}</time></small>
+    {% if include.showLink %}
+      <a class="post-link glyphicon glyphicon-link" href="#{{ post.slug }}"></a>
+    {% endif %}
+  </header>
+
+  <section class="post-content">
+    {{ post.content }}
+  </section>
+</article>

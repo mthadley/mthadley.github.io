@@ -1,0 +1,28 @@
+a {
+  color: $green;
+  font-weight: bold;
+  transition: color 0.25s;
+
+  &:hover {
+    color: lighten($green, 20%);
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3 {
+  color: $red;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+
+h4, h5, h6 {
+  color: $red;
+}
+
+strong {
+  color: darken($foregroundColor, 10%);
+}
+
+ul {
+  list-style: none;
+}

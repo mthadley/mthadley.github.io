@@ -7,4 +7,4 @@ Yea, I guess I have a blog. Writing or keeping a journal was never really a thin
 
 So until next time, I leave you with that one George Michael song:
 
-<div class="youtube"><iframe width="560" height="315" src="//www.youtube.com/embed/izGwDsrQ1eQ" frameborder="" allowfullscreen></iframe></div>
+{% include youtube.html id="izGwDsrQ1eQ" %}

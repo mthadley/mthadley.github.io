@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Michael Hadley
 ---
 
 ## Welcome

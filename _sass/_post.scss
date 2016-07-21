@@ -1,0 +1,33 @@
+.post {
+  margin-bottom: 40px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .post-header {
+    margin-bottom: 10px;
+
+    time {
+      color: $darkBlue;
+    }
+  }
+}
+
+.posts-index {
+  margin-bottom: 40px;
+
+  .post-listing {
+    margin-bottom: 5px;
+  }
+}
+
+.show-all {
+  color: $red;
+
+  &:hover {
+    color: lighten($red, 20%);
+  }
+}

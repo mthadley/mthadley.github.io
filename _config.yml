@@ -3,6 +3,9 @@ description: Nothing much
 encoding: utf-8
 kramdown:
   input: GFM
-name: Mike Hadley
+title: mthadley
+name: mthadley
 timezone: America/Los_Angeles
-url: http://mthadley.github.io
+url: https://mthadley.github.io
+gems:
+  - jekyll-seo-tag
