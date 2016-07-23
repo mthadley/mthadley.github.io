@@ -1,4 +1,5 @@
 ---
+image: /assets/mpd.png
 layout: post
 title: Elevator Music
 ---
