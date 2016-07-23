@@ -1,4 +1,5 @@
 ---
+image: /assets/bg.jpg
 layout: home
 ---
 
