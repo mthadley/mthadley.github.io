@@ -10,7 +10,17 @@
   .post-header {
     margin-bottom: 10px;
 
-    time {
+    h1 {
+      > a {
+        display: none;
+      }
+
+      &:hover > a {
+        display: initial;
+      }
+    }
+
+    small {
       color: $darkBlue;
     }
   }
