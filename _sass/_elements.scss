@@ -1,22 +1,22 @@
 a {
-  color: $green;
+  color: $secondary;
   font-weight: bold;
   transition: color 0.25s;
 
   &:hover {
-    color: lighten($green, 20%);
+    color: lighten($secondary, 20%);
     text-decoration: none;
   }
 }
 
 h1, h2, h3 {
-  color: $red;
+  color: $theme;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
 }
 
 h4, h5, h6 {
-  color: $red;
+  color: $theme;
 }
 
 strong {

@@ -15,19 +15,19 @@ nav > ul {
     margin-right: 20px;
 
     a {
-      color: $darkBlue;
+      color: $accent;
       font-size: 20px;
       font-weight: normal;
 
       &:hover {
-        color: lighten($darkBlue, 20%);
+        color: lighten($accent, 20%);
       }
     }
   }
 }
 
 .turbolinks-progress-bar {
-  background-color: $darkBlue;
+  background-color: $accent;
 }
 
 #mainContainer {

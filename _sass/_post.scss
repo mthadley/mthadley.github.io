@@ -21,7 +21,7 @@
     }
 
     small {
-      color: $darkBlue;
+      color: $accent;
     }
   }
 }
@@ -35,9 +35,9 @@
 }
 
 .show-all {
-  color: $red;
+  color: $theme;
 
   &:hover {
-    color: lighten($red, 20%);
+    color: lighten($theme, 20%);
   }
 }
