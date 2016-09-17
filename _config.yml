@@ -1,11 +1,16 @@
-author: Michael Hadley
+author:
+  name: Michael Hadley
+  twitter: mikethadley
 description: Nothing much
 encoding: utf-8
-kramdown:
-  input: GFM
-title: mthadley
-name: mthadley
-timezone: America/Los_Angeles
-url: https://mthadley.github.io
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
+kramdown:
+  input: GFM
+name: mthadley
+title: mthadley
+timezone: America/Los_Angeles
+twitter:
+  username: mikethadley
+url: https://mthadley.github.io
