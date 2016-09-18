@@ -2,13 +2,17 @@
 layout: default
 ---
 
-<div class="posts-index">
+<ul class="posts-index">
   {% for post in site.posts %}
-  <div class="post-listing">
+  <li class="post-listing">
     <a href="{{ post.url }}">{{ post.title }}</a>
-    <small class="post-date">{{ post.date | date: "%Y %B %-d" }}</small>
-  </div>
+
+    <small class="post-date">
+      {% include icon.html name="hourglass" %}
+      {{ post.date | date: "%B %-d, %Y" }}
+    </small>
+  </li>
   {% endfor %}
-</div>
+</ul>
 
 <a class="show-all" href="/posts/all.html">Show All</a>
