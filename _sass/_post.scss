@@ -45,6 +45,19 @@
   }
 }
 
+.post-links {
+  border-top: 2px dashed rgba($foregroundColor, 0.2);
+  font-size: 20px;
+  padding: 24px 0;
+
+  ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
 .show-all {
   color: $theme;
 
