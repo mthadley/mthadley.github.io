@@ -12,7 +12,7 @@ it is not so distracting that it takes me out of the thought process of whatever
 I am currently working on.
 
 I've decided to write about some of the music software that I've been using, and
-what I like about each one. I'm a linux/terminal guy, so don't be too surprised
+what I like about each one. I'm a Linux/terminal guy, so don't be too surprised
 when some of these programs don't come with your standard GUI (though you
 generally can find a graphical front-end for them). I'll also point out that
 while I do sometimes listen to pod-casts, I mostly listen to music and these
@@ -22,17 +22,17 @@ programs will be discussed with a focus on their music listening features.
 
 It's pretty funny that for many people, Youtube (a video service) has become
 their defacto __music__ streaming service. I know you and I have both done this,
-we open a video on youtube to listen to a specifc song or album, and background
+we open a video on Youtube to listen to a specific song or album, and background
 the tab as we really only care about the audio stream. We do this because
 Youtube is both on-demand _and_ free, two properties which do not exist on any
 currently available music streaming service. Google has started to catch onto
 [this](http://www.theverge.com/2014/11/12/7201969/youtube-music-key-new-subscription-service),
-but for now there are better ways to listen to Youtube if thats your preffered
+but for now there are better ways to listen to Youtube if that's your preferred
 source.
 
 ![mpsyt](/assets/mpsyt.png)
 
-[mpsyt](https://github.com/np1/mps-youtube) allows you to stream youtube audio
+[mpsyt](https://github.com/np1/mps-youtube) allows you to stream Youtube audio
 (and video if you want it), from the command line. It has built in search and
 support for playlists, and is very easy to use. It cuts out the video that we
 generally don't care about, and exposes itself as a music service with an almost
@@ -51,8 +51,8 @@ $ mpsyt
 ### Pianobar
 
 Pandora is one of the old standbys in the now very crowded music streaming
-service space. Without going into who offers the best service (pandora vs
-spotify, etc.), I will say that I still like Pandora even if it may be falling
+service space. Without going into who offers the best service (Pandora vs
+Spotify, etc.), I will say that I still like Pandora even if it may be falling
 behind in certain areas. It's still free to use and does a decent job of playing
 music you generally want to hear. It has the advantage that you can generally
 press play and it will play music for the rest of your workday without any
@@ -66,7 +66,7 @@ client which has a few advantages over it's web based counterpart. Obviously it
 will use less system resources since you don't need fire up your web browser or
 open up another tab, but most importantly, it gives you __unlimited song skips__
 with __no ads__, without needing to pay for Pandora's premium service. In
-addition, all of the pandora features you would expect are still available here
+addition, all of the Pandora features you would expect are still available here
 (thumb up songs, channel creation), and I can't recommend it enough to any
 Pandora user.
 
@@ -89,7 +89,7 @@ want something else:
 For this purpose, I have been using [mpd](http://www.musicpd.org/) and
 [ncmpcpp](http://ncmpcpp.rybczak.net/). For those not familiar with this kind of
 setup, mpd runs as a server locally and plays your files, while ncmpcpp acts as
-a client to control mpd. Due to its' client-server archicture, the client does
+a client to control mpd. Due to its' client-server architecture, the client does
 not actually have to be running on the same machine, and you also have the
 option to use other clients as well (see
 [mpc](http://www.musicpd.org/clients/mpc/)). While few users will probably make
@@ -114,7 +114,7 @@ music collection and stream that for free. This is very convenient and as such I
 have been meaning to see if there are any alternative clients (preferably
 terminal based) to their web based GUI.
 
-Anyways, thats all I have this time. If you are new to any of these programs and
+Anyways, that's all I have this time. If you are new to any of these programs and
 have found them at all intriguing, I hope you give them a try. Next time I'll be
 writing about [FOSS](http://en.wikipedia.org/wiki/Free_and_open-source_software)
 video editing programs after a recent [Computerphile
