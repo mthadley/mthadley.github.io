@@ -9,10 +9,10 @@
       {% endif %}
     </h1>
 
-    <small>
-      {% include icon.html name="hourglass" %}
+    <div class="post-date">
+      {% include icon.html name="calendar" size="md" %}
       <time>{{ post.date | date: "%B %-d, %Y" }}</time>
-    </small>
+    </div>
   </header>
 
   <section class="post-content">

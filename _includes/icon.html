@@ -1,1 +1,16 @@
-<span class="glyphicon glyphicon-{{ include.name }}" aria-hidden="true"></span>
+{% case include.size %}
+  {% when 'sm' %}
+    {% assign size = '16' %}
+  {% when 'md' %}
+    {% assign size = '32' %}
+  {% when 'lg' %}
+    {% assign size = '64' %}
+  {% when 'xl' %}
+    {% assign size = '128' %}
+  {% else %}
+    {% assign size = '32' %}
+{% endcase %}
+
+<svg class="octicon octicon-{{ include.name }}"width="{{ size }}" height="{{ size }}" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
+  <use xlink:href="#{{ include.name }}" />
+</svg>

@@ -23,6 +23,12 @@ strong {
   color: darken($foregroundColor, 10%);
 }
 
+svg {
+  color: inherit;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
 ul {
   list-style: none;
 }

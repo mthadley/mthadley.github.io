@@ -21,8 +21,10 @@
       }
     }
 
-    small {
+    .post-date {
+      align-items: center;
       color: $accent;
+      display: flex;
     }
   }
 }
