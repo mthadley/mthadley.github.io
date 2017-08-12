@@ -1,0 +1,7 @@
+.card {
+  transition: border 0.4s ease;
+
+  &:hover {
+    border-color: $accent;
+  }
+}

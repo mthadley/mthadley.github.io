@@ -1,0 +1,99 @@
+- name: outlander-ui
+  language: js
+  description: A dark, flat theme for Atom, from elsewhere.
+  source: true
+  repo: https://github.com/mthadley/outlander-ui
+- name: outlander-syntax
+  language: js
+  description: A dark syntax theme from elsewhere
+  source: true
+  repo: https://github.com/mthadley/outlander-syntax
+- name: metal.js
+  language: js
+  description: Build UI components in a solid, flexible way.
+  repo: https://github.com/mthadley/metal.js
+  link: http://metaljs.com
+- name: metal-soy-critic
+  language: typescript
+  description: A metal-soy code validation utility.
+  source: true
+  repo: https://github.com/mthadley/metal-soy-critic
+- name: language-closure-templates
+  language: js
+  description: Syntax Highlighting for Closure (Soy) Templates
+  source: true
+  repo: https://github.com/mthadley/language-closure-templates
+- name: elm-byte
+  language: elm
+  description: Working with Bytes in Elm
+  source: true
+  repo: https://github.com/mthadley/elm-byte
+  link: http://package.elm-lang.org/packages/mthadley/elm-byte/latest
+- name: linguist
+  language: ruby
+  description: Language Savant by Github.
+  repo: https://github.com/github/linguist
+- name: magnet-plugin-sass
+  language: js
+  description: ⚡ Magnet + Sass
+  repo: https://github.com/mthadley/magnet-plugin-sass
+  source: true
+- name: magnet-news
+  language: js
+  description: Magnet + Hacker News
+  repo: https://github.com/mthadley/magnet-news
+  source: true
+  link: https://magnet-news.now.sh
+- name: funiq
+  language: rust
+  description: Command line utility to find duplicate files.
+  repo: https://github.com/mthadley/funiq
+  source: true
+- name: rclac
+  language: rust
+  description: Command line, stack-based calculator.
+  repo: https://github.com/mthadley/rclac
+  source: true
+- name: metal-tsx-todomvc
+  language: typescript
+  description: Metal-JSX + Typescript + TodoMVC Example
+  source: true
+  repo: https://github.com/mthadley/metal-tsx-todomvc
+- name: thenews
+  language: elm
+  description: Yet another Hacker News reader, but this time in Elm!
+  source: true
+  repo: https://github.com/mthadley/thenews
+  link: https://mthadley.github.io/thenews/
+- name: elm-bp
+  language: elm
+  description: My personal Elm boilerplate.
+  source: true
+  repo: https://github.com/mthadley/elm-bp
+- name: dicey
+  language: elm
+  description: A dice rolling helper.
+  source: true
+  repo: https://github.com/mthadley/dicey
+  link: https://mthadley.github.io/dicey/
+- name: EBoy
+  language: elm
+  description: A Z80 emulator in Elm.
+  source: true
+  repo: https://github.com/mthadley/Eboy
+- name: rupe
+  language: rust
+  description: Rope data structure written in Rust.
+  source: true
+  repo: https://github.com/mthadley/rupe
+- name: lzs
+  language: js
+  description: Liferay Zombie Shooter.
+  source: true
+  repo: https://github.com/mthadley/lzs
+  link: http://mthadley.github.io/lzs
+- name: soyparser
+  language: typescript
+  description: A parser for Closure Templates (Soy Templates).
+  source: true
+  repo: https://github.com/metal/soyparser
