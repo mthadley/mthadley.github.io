@@ -1,0 +1,92 @@
+/* Values */
+
+:root {
+  --accent: #FA3A2C;
+  --bg: #F2F5F4;
+  --fg: #232325;
+
+  --content-width: 400px;
+
+  --font-family: monospace;
+  --name-font-size: 72px;
+  --name-line-height: 0.72;
+  --name-last-letter-spacing: 0.12em;
+}
+
+/* Name */
+
+.name {
+  color: var(--accent);
+  font-size: var(--name-font-size);
+  font-weight: bold;
+  line-height: var(--name-line-height);
+  text-transform: uppercase;
+}
+
+.name--last {
+  letter-spacing: var(--name-last-letter-spacing);
+}
+
+/* Links */
+
+.link a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.link a:hover {
+  opacity: 0.6;
+}
+
+/* Layout */
+
+body {
+  align-items: center;
+  background-color: var(--bg);
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  text-align: center;
+}
+
+main {
+  transform: translateY(-10vh);
+  max-width: var(--content-width);
+  display: grid;
+  grid-template-areas:
+    "first-name  first-name first-name"
+    "last-name   last-name  last-name"
+    "github      twitter    twitter"
+    "github      job        job"
+    "email       email      email";
+}
+
+.name--first {
+  grid-area: first-name;
+}
+
+.name--last {
+  grid-area: last-name;
+}
+
+.github {
+  grid-area: github;
+}
+
+.twitter {
+  grid-area: twitter;
+}
+
+.job {
+  grid-area: job;
+}
+
+.email {
+  grid-area: email;
+}
