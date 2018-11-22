@@ -4,13 +4,39 @@
   --accent: #FA3A2C;
   --bg: #F2F5F4;
   --fg: #232325;
-
-  --content-width: 400px;
+  --twitter-accent: #006E8E;
+  --job-accent: #F40060;
 
   --font-family: monospace;
+
+  --name-first-x: 0;
+  --name-first-y: 0;
+  --name-last-letter-spacing: 0.13em;
   --name-font-size: 72px;
-  --name-line-height: 0.72;
-  --name-last-letter-spacing: 0.12em;
+  --name-scale: 1.4;
+
+  --name-last-x: -3px;
+  --name-last-y: 64px;
+
+  --github-x: 108px;
+  --github-y: 109px;
+  --github-font-size: 26px;
+  --github-scale: 1.6, 1;
+
+  --twitter-x: 66px;
+  --twitter-y: 215px;
+  --twitter-font-size: 48px;
+  --twitter-scale: 1, 3.2;
+
+  --job-x: 1px;
+  --job-y: 294px;
+  --job-font-size: 54px;
+  --job-scale: 1, 1;
+
+  --email-x: -57px;
+  --email-y: 193px;
+  --email-font-size: 48px;
+  --email-scale: 1, 1.5;
 }
 
 /* Name */
@@ -19,7 +45,7 @@
   color: var(--accent);
   font-size: var(--name-font-size);
   font-weight: bold;
-  line-height: var(--name-line-height);
+  transform: scaleY(var(--name-scale));
   text-transform: uppercase;
 }
 
@@ -34,13 +60,23 @@
   font-weight: bold;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  line-height: inherit;
 }
 
 .link a:hover {
   opacity: 0.6;
 }
 
+.link h3, link h2 {
+  line-height: inherit;
+  margin: 0;
+}
+
 /* Layout */
+
+.name, .link {
+  position: absolute;
+}
 
 body {
   align-items: center;
@@ -49,44 +85,53 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
-  justify-content: center;
   margin: 0;
   min-height: 100vh;
-  text-align: center;
 }
 
 main {
-  transform: translateY(-10vh);
-  max-width: var(--content-width);
-  display: grid;
-  grid-template-areas:
-    "first-name  first-name first-name"
-    "last-name   last-name  last-name"
-    "github      twitter    twitter"
-    "github      job        job"
-    "email       email      email";
+  transform: translateX(-150px);
+  position: relative;
+  margin-top: 30px;
 }
 
 .name--first {
-  grid-area: first-name;
+  top: var(--name-first-y);
+  left: var(--name-first-x);
 }
 
 .name--last {
-  grid-area: last-name;
+  top: var(--name-last-y);
+  left: var(--name-last-x);
 }
 
 .github {
-  grid-area: github;
+  transform: scale(var(--github-scale));
+  font-size: var(--github-font-size);
+  top: var(--github-y);
+  left: var(--github-x);
+  z-index: 1;
 }
 
 .twitter {
-  grid-area: twitter;
+  font-size: var(--twitter-font-size);
+  color: var(--twitter-accent);
+  left: var(--twitter-x);
+  top: var(--twitter-y);
+  transform: scale(var(--twitter-scale));
 }
 
 .job {
-  grid-area: job;
+  color: var(--job-accent);
+  transform: scale(var(--job-scale));
+  font-size: var(--job-font-size);
+  top: var(--job-y);
+  left: var(--job-x);
 }
 
 .email {
-  grid-area: email;
+  transform: rotate(-90deg) scale(var(--email-scale));
+  font-size: var(--email-font-size);
+  top: var(--email-y);
+  left: var(--email-x);
 }
