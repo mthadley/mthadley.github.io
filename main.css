@@ -90,7 +90,7 @@ body {
 }
 
 main {
-  transform: translateX(-170px);
+  transform: translateX(-180px);
   position: relative;
   margin-top: 30px;
 }
