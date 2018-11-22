@@ -7,35 +7,36 @@
   --twitter-accent: #006E8E;
   --job-accent: #F40060;
 
-  --font-family: monospace;
+  --base-font-family: 'Rubik Mono One', sans-serif;
+  --job-font-family: 'Anton', sans-serif;
+  --github-font-family: 'Playball', cursive;
 
   --name-first-x: 0;
   --name-first-y: 0;
-  --name-last-letter-spacing: 0.13em;
-  --name-font-size: 72px;
+  --name-last-letter-spacing: 0.17em;
+  --name-font-size: 60px;
   --name-scale: 1.4;
-
-  --name-last-x: -3px;
+  --name-last-x: -2px;
   --name-last-y: 64px;
 
-  --github-x: 108px;
-  --github-y: 109px;
-  --github-font-size: 26px;
-  --github-scale: 1.6, 1;
+  --github-x: 137px;
+  --github-y: 87px;
+  --github-font-size: 33px;
+  --github-scale: 2.1, 1;
 
-  --twitter-x: 66px;
-  --twitter-y: 215px;
-  --twitter-font-size: 48px;
-  --twitter-scale: 1, 3.2;
+  --twitter-x: 44px;
+  --twitter-y: 227px;
+  --twitter-font-size: 47px;
+  --twitter-scale: 0.9, 3.3;
 
-  --job-x: 1px;
-  --job-y: 294px;
-  --job-font-size: 54px;
-  --job-scale: 1, 1;
+  --job-x: 66px;
+  --job-y: 311px;
+  --job-font-size: 52px;
+  --job-scale: 1.6, 1;
 
-  --email-x: -57px;
-  --email-y: 193px;
-  --email-font-size: 48px;
+  --email-x: -68px;
+  --email-y: 198px;
+  --email-font-size: 39px;
   --email-scale: 1, 1.5;
 }
 
@@ -43,10 +44,10 @@
 
 .name {
   color: var(--accent);
+  font-family: var(--name-font-family);
   font-size: var(--name-font-size);
-  font-weight: bold;
-  transform: scaleY(var(--name-scale));
   text-transform: uppercase;
+  transform: scaleY(var(--name-scale));
 }
 
 .name--last {
@@ -57,7 +58,6 @@
 
 .link a {
   color: inherit;
-  font-weight: bold;
   text-decoration: none;
   transition: opacity 0.2s ease;
   line-height: inherit;
@@ -84,13 +84,13 @@ body {
   color: var(--fg);
   display: flex;
   flex-direction: column;
-  font-family: var(--font-family);
+  font-family: var(--base-font-family);
   margin: 0;
   min-height: 100vh;
 }
 
 main {
-  transform: translateX(-150px);
+  transform: translateX(-170px);
   position: relative;
   margin-top: 30px;
 }
@@ -106,10 +106,11 @@ main {
 }
 
 .github {
-  transform: scale(var(--github-scale));
+  font-family: var(--github-font-family);
   font-size: var(--github-font-size);
-  top: var(--github-y);
   left: var(--github-x);
+  top: var(--github-y);
+  transform: scale(var(--github-scale));
   z-index: 1;
 }
 
@@ -123,10 +124,11 @@ main {
 
 .job {
   color: var(--job-accent);
-  transform: scale(var(--job-scale));
+  font-family: var(--job-font-family);
   font-size: var(--job-font-size);
-  top: var(--job-y);
   left: var(--job-x);
+  top: var(--job-y);
+  transform: scale(var(--job-scale));
 }
 
 .email {
