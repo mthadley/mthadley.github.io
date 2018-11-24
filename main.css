@@ -15,27 +15,27 @@
   --name-first-y: 0;
   --name-last-letter-spacing: 0.17em;
   --name-font-size: 60px;
-  --name-scale: 1.4;
+  --name-scale: 3;
   --name-last-x: -2px;
-  --name-last-y: 64px;
+  --name-last-y: 132px;
 
   --github-x: 137px;
-  --github-y: 87px;
+  --github-y: 186px;
   --github-font-size: 33px;
   --github-scale: 2.1, 1;
 
   --twitter-x: 44px;
-  --twitter-y: 227px;
+  --twitter-y: 327px;
   --twitter-font-size: 47px;
   --twitter-scale: 0.9, 3.3;
 
   --job-x: 66px;
-  --job-y: 311px;
+  --job-y: 411px;
   --job-font-size: 52px;
   --job-scale: 1.6, 1;
 
   --email-x: -68px;
-  --email-y: 198px;
+  --email-y: 298px;
   --email-font-size: 39px;
   --email-scale: 1, 1.5;
 }
@@ -92,7 +92,7 @@ body {
 main {
   transform: translateX(-180px);
   position: relative;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .name--first {
