@@ -145,6 +145,9 @@
                   ></iframe>
                 `;
                 break;
+              case '':
+                output = `Error: Missing command.`;
+                break;
               default:
                 output = `Error: Command not found: "${input}"`;
             }
