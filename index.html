@@ -61,7 +61,7 @@
   <body>
     <main hidden>
       <fade-in delay="0s">
-        <pre>Last login: Tue, March 11th, 1984</pre>
+        <last-login></last-login>
       </fade-in>
       <fade-in delay="1s">
         <mthadley-terminal input="about"></mthadley-terminal>
@@ -217,6 +217,41 @@
               .prompt {
                 margin-right: 10px;
               }
+            `;
+          }
+        },
+      );
+
+      customElements.define(
+        'last-login',
+        class extends LitElement {
+          static get properties() {
+            return {
+              lastLogin: {type: String, attribute: false},
+            };
+          }
+
+          constructor() {
+            super();
+
+            this.lastLogin = localStorage.getItem('lastLogin');
+            localStorage.setItem('lastLogin', Date.now());
+          }
+
+          render() {
+            const login = this.lastLogin
+              ? new Intl.DateTimeFormat('default', {
+                  weekday: 'short',
+                  month: 'long',
+                  day: 'numeric',
+                  year: 'numeric',
+                  hour: 'numeric',
+                  minute: 'numeric',
+                }).format(this.lastLogin)
+              : null;
+
+            return html`
+              <pre>Last login: ${login || 'Never'}</pre>
             `;
           }
         },
