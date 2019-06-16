@@ -19,7 +19,7 @@
         --bg: #111;
         --fg: #48e048;
         --term-shadow: 0 0 2px var(--fg);
-        --base-font-family: 'Ubunti Mono', monospace;
+        --base-font-family: 'Ubuntu Mono', monospace;
       }
 
       body {
@@ -253,6 +253,14 @@
 
             return html`
               <pre>Last login: ${login || 'Never'}</pre>
+            `;
+          }
+
+          static get styles() {
+            return css`
+              pre {
+                font-family: inherit;
+              }
             `;
           }
         },
