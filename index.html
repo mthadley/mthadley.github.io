@@ -89,7 +89,13 @@
           }
 
           firstUpdated() {
-            this.shadowRoot.querySelector('input').focus();
+            this.shadowRoot.getElementById('input').focus();
+          }
+
+          updated(changedProperties) {
+            // Scroll the prompt into view. Useful on phones.
+            if (changedProperties.has('lines'))
+              this.shadowRoot.getElementById('input').scrollIntoView(false);
           }
 
           handleInput(event) {
@@ -191,6 +197,7 @@
               )}
               ${this.renderPrompt()}
               <input
+                id="input"
                 autofocus
                 .value=${this.input}
                 @input=${this.handleInput}
