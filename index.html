@@ -124,6 +124,14 @@
                   </p>
                 `;
                 break;
+              case 'news':
+                output = `Loading...`;
+                location.href = '/thenews';
+                break;
+              case 'dice':
+                output = `Loading...`;
+                location.href = '/dice';
+                break;
               case 'help':
                 output = html`
                   <p>
@@ -131,6 +139,8 @@
                     <ul>
                       <li>about - Display information about this person.</li>
                       <li>help  - Display this help message.</li>
+                      <li>news  - Read the news.</li>
+                      <li>dice  - Roll some dice.</li>
                     </ul>
                   </p>
                 `;
@@ -152,7 +162,10 @@
                 output = `Error: Missing command.`;
                 break;
               default:
-                output = `Error: Command not found: "${input}"`;
+                output = html`
+                  <p>Error: Command not found: "${input}"</p>
+                  <p>Try running "help".</p>
+                `;
             }
 
             this.lines = this.lines.concat({command: this.input, output});
