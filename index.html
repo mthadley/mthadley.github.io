@@ -189,10 +189,10 @@
               ${this.lines.map(
                 ({command, output}) =>
                   html`
-                    <div>
-                      <div>${this.renderPrompt()}<span>${command}
+                    <section title=${`Output for "${command}" command`}>
+                      <div>${this.renderPrompt()}${command}</div>
                       <p>${output}</p>
-                    </div>
+                    </section>
                   `,
               )}
               ${this.renderPrompt()}
