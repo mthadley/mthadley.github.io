@@ -1,5 +1,6 @@
 module App exposing (Model, Msg, init, subscriptions, update, view)
 
+import BootScreen
 import Css exposing (..)
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (css)
@@ -10,13 +11,14 @@ import Html.Styled.Attributes exposing (css)
 
 
 type alias Model =
-    { greeting : String
+    { booting : Maybe BootScreen.Model
     }
 
 
-init : () -> ( Model, Cmd Msg )
-init () =
-    ( Model "Hello World", Cmd.none )
+init : Model
+init =
+    { booting = Just BootScreen.init
+    }
 
 
 
@@ -25,7 +27,14 @@ init () =
 
 view : Model -> Html Msg
 view model =
-    main_ [] []
+    main_ []
+        [ case model.booting of
+            Just bootingModel ->
+                BootScreen.view bootingModel
+
+            Nothing ->
+                text "Running"
+        ]
 
 
 
@@ -33,14 +42,14 @@ view model =
 
 
 type Msg
-    = Noop
+    = NewBootScreen (Maybe BootScreen.Model)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Noop ->
-            ( model, Cmd.none )
+        NewBootScreen bootingModel ->
+            ( { model | booting = bootingModel }, Cmd.none )
 
 
 
@@ -48,5 +57,10 @@ update msg model =
 
 
 subscriptions : Model -> Sub Msg
-subscriptions =
-    always Sub.none
+subscriptions model =
+    case model.booting of
+        Just bootingModel ->
+            Sub.map NewBootScreen (BootScreen.subs bootingModel)
+
+        Nothing ->
+            Sub.none

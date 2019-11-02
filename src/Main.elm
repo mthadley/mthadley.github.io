@@ -9,7 +9,7 @@ import Html.Styled exposing (toUnstyled)
 main : Program () Model Msg
 main =
     Browser.element
-        { init = init
+        { init = \() -> ( init, Cmd.none )
         , view = toUnstyled << view
         , update = update
         , subscriptions = subscriptions
