@@ -6,7 +6,11 @@ import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (css)
 
 
-type Model
+type
+    Model
+    {- TODO: We can probably get rid of the `Int`, and just track progress
+       by time elapsed.
+    -}
     = Model Float Int
 
 
@@ -114,7 +118,7 @@ viewLine : String -> Html msg
 viewLine message =
     Html.Styled.pre
         [ css
-            [ color (hex "FFF")
+            [ color (hex "#D0D0D0")
             , margin zero
             ]
         ]
