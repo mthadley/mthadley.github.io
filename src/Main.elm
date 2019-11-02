@@ -3,6 +3,7 @@ module Main exposing (main)
 import BootScreen
 import Browser
 import Css exposing (..)
+import Desktop
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (css)
 
@@ -17,26 +18,25 @@ main =
         }
 
 
-type alias Model =
-    { booting : Maybe BootScreen.Model
-    }
+type Model
+    = Booting BootScreen.Model
+    | Running
 
 
 init : Model
 init =
-    { booting = Just BootScreen.init
-    }
+    Booting BootScreen.init
 
 
 view : Model -> Html Msg
 view model =
     main_ []
-        [ case model.booting of
-            Just bootingModel ->
+        [ case model of
+            Booting bootingModel ->
                 BootScreen.view bootingModel
 
-            Nothing ->
-                text "Running"
+            Running ->
+                Desktop.view
         ]
 
 
@@ -46,16 +46,26 @@ type Msg
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    case msg of
-        NewBootScreen bootingModel ->
-            ( { model | booting = bootingModel }, Cmd.none )
+    case ( msg, model ) of
+        ( NewBootScreen maybeBootingModel, Booting _ ) ->
+            ( case maybeBootingModel of
+                Just newBootingModel ->
+                    Booting newBootingModel
+
+                Nothing ->
+                    Running
+            , Cmd.none
+            )
+
+        _ ->
+            ( model, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    case model.booting of
-        Just bootingModel ->
+    case model of
+        Booting bootingModel ->
             Sub.map NewBootScreen (BootScreen.subs bootingModel)
 
-        Nothing ->
+        Running ->
             Sub.none

@@ -24,18 +24,22 @@ messages =
     , Print "Warming registers..."
     , UpdateInterval 50
     , Print "Spinning up mutexes..."
-    , UpdateInterval 75
     , Print "Loaded progresses..."
-    , UpdateInterval 250
+    , UpdateInterval 300
     , Blank
     , Print "Busting caches:"
-    , UpdateInterval 50
+    , UpdateInterval 20
     , Blank
     , Numbered 10 "Zapped cache: "
-    , UpdateInterval 450
+    , UpdateInterval 300
     , Blank
     , Print "Starting graphical user interface..."
     ]
+
+
+defaultInterval : Float
+defaultInterval =
+    200
 
 
 totalSteps : Int
@@ -141,7 +145,7 @@ currentInterval progress =
     messages
         |> List.foldl currentIntervalHelp ( 0, Nothing )
         |> Tuple.second
-        |> Maybe.withDefault 500
+        |> Maybe.withDefault defaultInterval
 
 
 subs : Model -> Sub (Maybe Model)
