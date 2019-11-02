@@ -28,10 +28,12 @@ viewTaskbar =
         [ css
             [ backgroundColor Colors.background
             , bottom zero
-            , height (px 35)
+            , minHeight (px 35)
             , left zero
             , position absolute
             , right zero
+            , padding (px 3)
+            , displayFlex
 
             -- Top highlight
             , after
@@ -47,4 +49,17 @@ viewTaskbar =
                 ]
             ]
         ]
-        []
+        [ viewStartButton
+        ]
+
+
+viewStartButton : Html msg
+viewStartButton =
+    button
+        [ css
+            [ backgroundColor Colors.background
+            , color Colors.lightForeground
+            , fontWeight (int 700)
+            ]
+        ]
+        [ text "Start" ]
