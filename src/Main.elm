@@ -1,9 +1,10 @@
 module Main exposing (main)
 
-import App exposing (Model, Msg, init, subscriptions, update, view)
+import BootScreen
 import Browser
-import Html
-import Html.Styled exposing (toUnstyled)
+import Css exposing (..)
+import Html.Styled exposing (..)
+import Html.Styled.Attributes exposing (css)
 
 
 main : Program () Model Msg
@@ -14,3 +15,47 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
+
+
+type alias Model =
+    { booting : Maybe BootScreen.Model
+    }
+
+
+init : Model
+init =
+    { booting = Just BootScreen.init
+    }
+
+
+view : Model -> Html Msg
+view model =
+    main_ []
+        [ case model.booting of
+            Just bootingModel ->
+                BootScreen.view bootingModel
+
+            Nothing ->
+                text "Running"
+        ]
+
+
+type Msg
+    = NewBootScreen (Maybe BootScreen.Model)
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        NewBootScreen bootingModel ->
+            ( { model | booting = bootingModel }, Cmd.none )
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    case model.booting of
+        Just bootingModel ->
+            Sub.map NewBootScreen (BootScreen.subs bootingModel)
+
+        Nothing ->
+            Sub.none
