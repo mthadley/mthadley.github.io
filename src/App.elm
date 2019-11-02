@@ -3,7 +3,6 @@ module App exposing (Model, Msg, init, subscriptions, update, view)
 import Css exposing (..)
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (css)
-import Theme exposing (theme)
 
 
 
@@ -26,17 +25,7 @@ init () =
 
 view : Model -> Html Msg
 view model =
-    main_
-        [ css
-            [ backgroundColor theme.secondary
-            , color theme.primary
-            ]
-        ]
-        [ span
-            [ css [ color theme.accent ]
-            ]
-            [ text model.greeting ]
-        ]
+    main_ [] []
 
 
 
