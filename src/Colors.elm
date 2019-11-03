@@ -1,4 +1,4 @@
-module Colors exposing (background, darkForeground, lightForeground, wallpaper)
+module Colors exposing (background, backgroundDarker, darkForeground, lightForeground, wallpaper)
 
 import Css exposing (Color, hex)
 
@@ -11,6 +11,11 @@ wallpaper =
 background : Color
 background =
     hex "#c0c0c0"
+
+
+backgroundDarker : Color
+backgroundDarker =
+    hex "#b5b5b5"
 
 
 lightForeground : Color

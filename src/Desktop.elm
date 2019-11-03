@@ -4,6 +4,7 @@ import Colors
 import Css exposing (..)
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (css)
+import Ui.Button as Button
 
 
 view : Html msg
@@ -34,32 +35,8 @@ viewTaskbar =
             , right zero
             , padding (px 3)
             , displayFlex
-
-            -- Top highlight
-            , after
-                [ boxShadow5 inset zero (px 2) (px 1) (hex "#F3F3F3")
-                , display block
-                , property "content" "\"\""
-                , position absolute
-                , top zero
-                , left zero
-                , right zero
-                , height (px 4)
-                , pointerEvents none
-                ]
+            , borderTop3 (px 2) solid (hex "#E6E6E6")
             ]
         ]
-        [ viewStartButton
+        [ Button.view [] [ text "Start" ]
         ]
-
-
-viewStartButton : Html msg
-viewStartButton =
-    button
-        [ css
-            [ backgroundColor Colors.background
-            , color Colors.lightForeground
-            , fontWeight (int 700)
-            ]
-        ]
-        [ text "Start" ]
