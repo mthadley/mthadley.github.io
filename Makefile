@@ -42,3 +42,7 @@ format:
 .PHONY: clean
 clean:
 	@rm -fr $(OUT) elm-stuff node_modules result
+
+.PHONY: serve
+serve:
+	npx serve dist
