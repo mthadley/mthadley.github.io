@@ -1,6 +1,5 @@
 import (fetchTarball {
-  # Taken from https://nixos.org/channels/
-  url =  https://releases.nixos.org/nixpkgs/19.09-darwin/nixpkgs-darwin-19.09pre193404.9bbad4c6254/nixexprs.tar.xz;
+  url =  https://github.com/NixOS/nixpkgs/archive/10100a97c8964e82b30f180fda41ade8e6f69e41.tar.gz;
   # Generate with nix-prefetch-url --unpack --type sha256 [url]
-  sha256 = "1hjbn17s33w7zkmd69n26zgjk671rw41frgf6bzfvp1qaq5y74zl";
+  sha256 = "011f36kr3c1ria7rag7px26bh73d1b0xpqadd149bysf4hg17rln";
 }) {}
