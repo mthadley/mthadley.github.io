@@ -19,7 +19,7 @@
         --bg: #111;
         --fg: #48e048;
         --term-shadow: 0 0 2px var(--fg);
-        --base-font-family: 'Ubuntu Mono', monospace;
+        --base-font-family: "Ubuntu Mono", monospace;
       }
 
       body {
@@ -37,7 +37,7 @@
         background-image: linear-gradient(#15bc15 50%, var(--bg) 50%);
         background-size: 100% 6px;
         background-repeat: repeat-y;
-        content: '';
+        content: "";
         position: absolute;
         pointer-events: none;
         top: 0;
@@ -69,33 +69,37 @@
     </main>
 
     <script type="module">
-      import {LitElement, html, css} from 'https://cdn.skypack.dev/lit-element@~2?min';
-      import {contentLoaded} from 'https://cdn.skypack.dev/document-promises@~4?min';
+      import {
+        LitElement,
+        html,
+        css
+      } from "https://cdn.skypack.dev/lit-element@~2?min";
+      import { contentLoaded } from "https://cdn.skypack.dev/document-promises@~4?min";
 
       customElements.define(
-        'mthadley-terminal',
+        "mthadley-terminal",
         class extends LitElement {
           static get properties() {
             return {
-              lines: {attribute: false},
-              input: {type: String, reflect: true},
+              lines: { attribute: false },
+              input: { type: String, reflect: true }
             };
           }
 
           constructor() {
             super();
             this.lines = [];
-            this.input = '';
+            this.input = "";
           }
 
           firstUpdated() {
-            this.shadowRoot.getElementById('input').focus();
+            this.shadowRoot.getElementById("input").focus();
           }
 
           updated(changedProperties) {
             // Scroll the prompt into view. Useful on phones.
-            if (changedProperties.has('lines'))
-              this.shadowRoot.getElementById('input').scrollIntoView(false);
+            if (changedProperties.has("lines"))
+              this.shadowRoot.getElementById("input").scrollIntoView(false);
           }
 
           handleInput(event) {
@@ -115,7 +119,7 @@
 
             let output;
             switch (input) {
-              case 'about':
+              case "about":
                 output = html`
                   <p>
                     Hey there! My name is Michael Hadley. I'm a web developer
@@ -130,15 +134,15 @@
                   </p>
                 `;
                 break;
-              case 'news':
+              case "news":
                 output = `Loading...`;
-                location.href = '/thenews';
+                location.href = "/thenews";
                 break;
-              case 'dice':
+              case "dice":
                 output = `Loading...`;
-                location.href = '/dicey';
+                location.href = "/dicey";
                 break;
-              case 'help':
+              case "help":
                 output = html`
                   <p>
                     Valid commands are:
@@ -151,7 +155,7 @@
                   </p>
                 `;
                 break;
-              case 'michael':
+              case "michael":
                 output = html`
                   <iframe
                     style="max-width: 100%"
@@ -164,7 +168,7 @@
                   ></iframe>
                 `;
                 break;
-              case '':
+              case "":
                 output = `Error: Missing command.`;
                 break;
               default:
@@ -174,8 +178,8 @@
                 `;
             }
 
-            this.lines = this.lines.concat({command: this.input, output});
-            this.input = '';
+            this.lines = this.lines.concat({ command: this.input, output });
+            this.input = "";
           }
 
           renderPrompt() {
@@ -187,13 +191,13 @@
           render() {
             return html`
               ${this.lines.map(
-                ({command, output}) =>
+                ({ command, output }) =>
                   html`
                     <section title=${`Output for "${command}" command`}>
                       <div>${this.renderPrompt()}${command}</div>
                       <p>${output}</p>
                     </section>
-                  `,
+                  `
               )}
               ${this.renderPrompt()}
               <input
@@ -231,7 +235,7 @@
               }
 
               li:before {
-                content: '*';
+                content: "*";
                 margin-right: 10px;
               }
 
@@ -240,39 +244,39 @@
               }
             `;
           }
-        },
+        }
       );
 
       customElements.define(
-        'last-login',
+        "last-login",
         class extends LitElement {
           static get properties() {
             return {
-              lastLogin: {type: String, attribute: false},
+              lastLogin: { type: String, attribute: false }
             };
           }
 
           constructor() {
             super();
 
-            this.lastLogin = localStorage.getItem('lastLogin');
-            localStorage.setItem('lastLogin', Date.now());
+            this.lastLogin = localStorage.getItem("lastLogin");
+            localStorage.setItem("lastLogin", Date.now());
           }
 
           render() {
             const login = this.lastLogin
-              ? new Intl.DateTimeFormat('default', {
-                  weekday: 'short',
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric',
-                  hour: 'numeric',
-                  minute: 'numeric',
+              ? new Intl.DateTimeFormat("default", {
+                  weekday: "short",
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                  hour: "numeric",
+                  minute: "numeric"
                 }).format(this.lastLogin)
               : null;
 
             return html`
-              <pre>Last login: ${login || 'Never'}</pre>
+              <pre>Last login: ${login || "Never"}</pre>
             `;
           }
 
@@ -283,17 +287,18 @@
               }
             `;
           }
-        },
+        }
       );
 
       customElements.define(
-        'fade-in',
+        "fade-in",
         class extends LitElement {
           static get properties() {
             return {
-              delay: {type: String},
+              delay: { type: String }
             };
           }
+
           render() {
             return html`
               <div style="animation-delay: ${this.delay}">
@@ -324,12 +329,12 @@
               }
             `;
           }
-        },
+        }
       );
 
       async function main() {
         await contentLoaded;
-        document.querySelector('main').hidden = false;
+        document.querySelector("main").hidden = false;
       }
 
       main();
