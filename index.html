@@ -92,7 +92,19 @@
             this.input = "";
           }
 
+          connectedCallback() {
+            super.connectedCallback();
+
+            document.addEventListener("click", () => {
+              this.focusInput();
+            });
+          }
+
           firstUpdated() {
+            this.focusInput();
+          }
+
+          focusInput() {
             this.shadowRoot.getElementById("input").focus();
           }
 
@@ -125,12 +137,9 @@
                     Hey there! My name is Michael Hadley. I'm a web developer
                     based out of beautiful Los Angeles, California. I'm
                     currently doing cool stuff at
-                    <a href="https://workos.com" target="_blank"
-                      >WorkOS</a
-                    >, but you may have previously seen me at
-                    <a href="https://liferay.com/" target="_blank"
-                      >Liferay</a
-                    >!
+                    <a href="https://workos.com" target="_blank">WorkOS</a>, but
+                    you may have previously seen me at
+                    <a href="https://liferay.com/" target="_blank">Liferay</a>!
                   </p>
                 `;
                 break;
@@ -227,6 +236,7 @@
                 font-family: inherit;
                 background: transparent;
                 text-shadow: inherit;
+                outline: none;
               }
 
               ul {
@@ -315,16 +325,18 @@
 
               div {
                 opacity: 0;
-                animation: 0.4s ease-out 0s fadein;
+                animation: 0.8s cubic-bezier(0.9, -0.05, 0.26, 1.13) 0s fadein;
                 animation-fill-mode: forwards;
               }
 
               @keyframes fadein {
                 from {
                   opacity: 0;
+                  transform: scale3d(0.7, 2, 5);
                 }
                 to {
                   opacity: 1;
+                  transform: scale3d(1, 1, 1);
                 }
               }
             `;
